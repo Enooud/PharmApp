@@ -4,26 +4,57 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+//import native perso 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
+import { PostProviders } from '../providers/post-providers';
+
+//import page 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import { ForumPage } from '../pages/forum/forum';
+import { InscriptPage } from '../pages/inscript/inscript';
+import { LoginPage } from '../pages/login/login';
+import { RchpharmPage } from '../pages/rchpharm/rchpharm';
+
+
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    TabsPage,
+    ForumPage,
+    InscriptPage,
+    LoginPage,
+    RchpharmPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule,
+    HttpModule,
+    IonicStorageModule.forRoot(),
+    
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ForumPage,
+    InscriptPage,
+    LoginPage,
+    RchpharmPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    PostProviders,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

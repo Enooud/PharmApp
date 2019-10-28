@@ -1,14 +1,91 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Accueil
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-searchbar  placeholder="Rechercher Médicaments" [(ngModel)]="rchmed" >Recherche médicament
+  </ion-searchbar>
+
+  <ion-card>
+      <p class="txten">
+          Bienvenue! Pharma-Web est un annuaire pour savoir la disponibilité
+          des produits pharmaceutiques et leurs prix. Vous pouvez aussi retrouver 
+          facilement des pharmacies et participer à un forum santé avec nos conseillers 
+          à votre disposition. Créer 
+          <a (click)="onGologin()"> ici </a>
+          votre profil en quelques secondes pour participer !
+      </p>
+  </ion-card>
+  
+  <ion-list>
+
+    <ion-item>
+        <ion-label >Ville</ion-label>
+        <ion-select [(ngModel)]="Villephar">
+          <ion-option value="Cotonou">Cotonou</ion-option>
+          <ion-option value="Calavi">Calavi</ion-option>
+          <ion-option value="Pahou">Pahou</ion-option>
+          <ion-option value="Parakou">Parakou</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Pharmacie</ion-label>
+        <ion-select [(ngModel)]="Staphar">
+            <ion-option value="jour">De jour </ion-option>
+            <ion-option value="nuit">De garde</ion-option>
+            
+          </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nom de la pharmacie</ion-label>
+      <ion-input type="text" [(ngModel)]="Nomphar"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <button ion-button type="submit" color="grenn" (click)="goSearch()" block round>OK</button>
+    </ion-item>
+   
+  </ion-list>
+
+  <ion-list>
+      <ion-item *ngFor ="let pharmacie of pharmacies;">
+          <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="">
+                </ion-avatar>
+                <h2>
+                  Nom: {{pharmacie.Nomphar}} <br/> 
+                  Ville: {{pharmacie.Villephar}} {{pharmacie.QuartierPhar}} <br/>
+                  Indication: {{pharmacie.Adrphar}} <br/>
+                </h2>
+              </ion-item>
+              <ion-item-options side="left">
+                <button ion-button color="primary">
+                  <ion-icon name="text"></ion-icon>
+                  Message
+                </button>
+                <button ion-button color="secondary">
+                  <ion-icon name="call"></ion-icon>
+                  Appel
+                </button>
+              </ion-item-options>
+              <ion-item-options side="right">
+                <button ion-button color="primary">
+                  <ion-icon name="mail"></ion-icon>
+                  Email
+                </button>
+              </ion-item-options>
+            </ion-item-sliding>
+        </ion-item>
+  </ion-list>
+
 </ion-content>
