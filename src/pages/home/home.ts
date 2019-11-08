@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
 import { InscriptPage } from '../inscript/inscript';
 import { PostProviders } from '../../providers/post-providers';
+import { PharmainscripPage } from '../pharmainscrip/pharmainscrip';
+import { ForumPage } from '../forum/forum';
 
 @Component({
   selector: 'page-home',
@@ -87,5 +89,11 @@ export class HomePage {
   }
   
 
+  goAddpharma(){
+    this.navCtrl.push(PharmainscripPage);
+  }
 
+  toForum(){
+    this.navCtrl.push(ForumPage);
+  }
 }

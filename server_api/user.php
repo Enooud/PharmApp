@@ -8,16 +8,13 @@ header("Content-Type: application/json; charset=utf-8");
 include "config.php";
 
 $postjson = json_decode(file_get_contents('php://input'), true);
-if ($postjson['aski']=="ajout_etudiant") {
+if ($postjson['req']=="Add") {
 //	$mdp = md5($postjson['mdp']);
 	$query = mysqli_query($mysqli, "INSERT INTO utilisateur SET
 		
-        Statut = '$postjson[Statut]',
+        
         Nom = '$postjson[Nom]',
-        Prenoms = '$postjson[Prenoms]',
-        Datnais = '$postjson[Datnais]',
-        Email = '$postjson[Email]',
-        Password = '$postjson[Password]'
+        Prenom = '$postjson[Prenom]'
 		 " );
 	if ($query) $result = json_encode(array('success'=>true));
 	else $result = json_encode(array('success'=>false, 'msg'=>'Veillez ressayer plus tard'));

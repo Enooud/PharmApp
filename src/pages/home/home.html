@@ -21,7 +21,10 @@
           votre profil en quelques secondes pour participer !
       </p>
   </ion-card>
-  
+  <ion-fab right middle >
+    <button ion-fab color="grenn" (click)="toForum()" mini>
+      <ion-icon name="chatbubbles"></ion-icon></button>
+  </ion-fab>
   <ion-list>
 
     <ion-item>
@@ -87,5 +90,5 @@
             </ion-item-sliding>
         </ion-item>
   </ion-list>
-
+  <p class="low">Cliquer <a (click)="goAddpharma()">ici</a> pour inscription de votre pharmacie.</p>
 </ion-content>

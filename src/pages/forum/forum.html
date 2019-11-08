@@ -6,10 +6,26 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>forum</ion-title>
+    <ion-title>Bienvenue sur le forum</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <p></p>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="Email"></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label floating>Mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]="Password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button type="submit" color="grenn" (click)="Add_user()" block round>OK</button>
+    </ion-item>
+
+  </ion-list>
 </ion-content>

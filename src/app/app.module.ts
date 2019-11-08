@@ -18,6 +18,8 @@ import { ForumPage } from '../pages/forum/forum';
 import { InscriptPage } from '../pages/inscript/inscript';
 import { LoginPage } from '../pages/login/login';
 import { RchpharmPage } from '../pages/rchpharm/rchpharm';
+import { PharmainscripPage } from '../pages/pharmainscrip/pharmainscrip';
+
 
 
 
@@ -30,7 +32,9 @@ import { RchpharmPage } from '../pages/rchpharm/rchpharm';
     ForumPage,
     InscriptPage,
     LoginPage,
-    RchpharmPage
+    RchpharmPage,
+    PharmainscripPage,
+    ForumPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +53,9 @@ import { RchpharmPage } from '../pages/rchpharm/rchpharm';
     InscriptPage,
     LoginPage,
     RchpharmPage,
-    TabsPage
+    TabsPage,
+    PharmainscripPage,
+    ForumPage
   ],
   providers: [
     StatusBar,
