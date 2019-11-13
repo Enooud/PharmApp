@@ -13,7 +13,7 @@
 
   <ion-card>
       <p class="txten">
-          Bienvenue! Pharma-Web est un annuaire pour savoir la disponibilité
+          Bienvenue! PharmApp est un annuaire pour savoir la disponibilité
           des produits pharmaceutiques et leurs prix. Vous pouvez aussi retrouver 
           facilement des pharmacies et participer à un forum santé avec nos conseillers 
           à votre disposition. Créer 
@@ -21,7 +21,7 @@
           votre profil en quelques secondes pour participer !
       </p>
   </ion-card>
-  <ion-fab right middle >
+  <ion-fab right bottom >
     <button ion-fab color="grenn" (click)="toForum()" mini>
       <ion-icon name="chatbubbles"></ion-icon></button>
   </ion-fab>
@@ -29,7 +29,7 @@
 
     <ion-item>
         <ion-label >Ville</ion-label>
-        <ion-select [(ngModel)]="Villephar">
+        <ion-select  color="green" [(ngModel)]="Villephar">
           <ion-option value="Cotonou">Cotonou</ion-option>
           <ion-option value="Calavi">Calavi</ion-option>
           <ion-option value="Pahou">Pahou</ion-option>
@@ -39,7 +39,7 @@
 
     <ion-item>
         <ion-label>Pharmacie</ion-label>
-        <ion-select [(ngModel)]="Staphar">
+        <ion-select color="green" [(ngModel)]="Staphar">
             <ion-option value="jour">De jour </ion-option>
             <ion-option value="nuit">De garde</ion-option>
             
@@ -48,7 +48,7 @@
 
     <ion-item>
       <ion-label floating>Nom de la pharmacie</ion-label>
-      <ion-input type="text" [(ngModel)]="Nomphar"></ion-input>
+      <ion-input  color="green" type="text" [(ngModel)]="Nomphar"></ion-input>
     </ion-item>
 
 

@@ -1,7 +1,7 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>inscript</ion-title>
+    <ion-title>inscription</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -9,32 +9,37 @@
   <ion-list>
     <ion-item>
       <ion-label floating>Nom</ion-label>
-      <ion-input type="text" [(ngModel)]="Nom"></ion-input>
+      <ion-input color="green" type="text" [(ngModel)]="Nom"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Prenom</ion-label>
-      <ion-input type="text" [(ngModel)]="Prenom"></ion-input>
+      <ion-input color="green" type="text" [(ngModel)]="Prenom"></ion-input>
     </ion-item>
 
     <ion-item>
+      <ion-label floating>Date de naissance</ion-label>
+      <ion-datetime color="green" displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="Datnais"></ion-datetime>
+    </ion-item>
+  
+    <ion-item>
       <ion-label floating>Tel</ion-label>
-      <ion-input type="tel" [(ngModel)]="Tel"></ion-input>
+      <ion-input color="green" type="tel" [(ngModel)]="Tel"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Email</ion-label>
-      <ion-input type="text" [(ngModel)]="Email"></ion-input>
+      <ion-input color="green" type="email" [(ngModel)]="Email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Mot de passe</ion-label>
-      <ion-input type="password" [(ngModel)]="Password"></ion-input>
+      <ion-input  color="green" type="password" [(ngModel)]="Pass"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>confirmer mot de passe </ion-label>
-      <ion-input type="password" [(ngModel)]="Cmpass"></ion-input>
+      <ion-input color="green" type="password" [(ngModel)]="Cmpass"></ion-input>
     </ion-item>
 
     <ion-item>
